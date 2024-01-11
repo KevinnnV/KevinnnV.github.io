@@ -1,0 +1,125 @@
+body {
+  margin: 0px;
+  text-align: center;
+  font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1 {
+  color: #665a48;
+  margin: 10px auto 0px auto;
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  /* sejajar secara horizontal */
+  justify-content: space-between;
+  /* sejajar secara vertikal */
+  align-items: center;
+  /* relatif sesuai 16px */
+  padding: 1.4rem 7%; /* 1.4 x 16 (atas bawah), 7% untuk kanan kirinya (menyesuaikan device) */
+  background-color: white;
+  border-bottom: 1px solid #d6d6d6;
+  /* 5 komponen supaya navbarnya tetap diatas */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  /* supaya displaynya 1 garis */
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* dihover berubah warna */
+.navbar .navbar-nav a:hover {
+  color: black;
+}
+
+/* supaya ada garisnya */
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5 rem;
+  border-bottom: 0.1rem solid black;
+  /* dibuat supaya tidak kelihatan garisnya */
+  transform: scaleX(0);
+  /* supaya ada transisinya */
+  transition: 0.15s linear;
+}
+
+/* supaya garisnya muncul saat dihover */
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.75);
+}
+
+/*HERO*/
+
+.Hero {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 50px;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+
+.Hero .Box {
+  text-align: center;
+  max-width: 700px; /* Sesuaikan nilai maksimum lebar teks */
+  margin: auto;
+  display: inline-block;
+}
+
+.Hero .Box .imgs:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  transition: 0.5s ease;
+  filter: grayscale(100%);
+}
+
+.Hero .Box h1 {
+  margin-bottom: 10px;
+}
+
+.Hero .Box img {
+  max-width: 100%;
+}
+
+.Outro {
+  background-image: url(./foto/1.jpg);
+}
+
+/*Footer*/
+
+footer {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 1rem 0 2rem;
+}
+
+footer .socials {
+  padding: 1rem 0rem;
+}
+
+footer .socials a {
+  color: black;
+  margin: 1.5rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #f8f4ec;
+}

@@ -1,0 +1,152 @@
+body {
+  margin: 0px;
+  text-align: center;
+  font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light",
+    "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1 {
+  color: #665a48;
+  margin: 10px auto 0px auto;
+  font-family: "Sacramento", cursive;
+  font-size: 2.5rem;
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  /* sejajar secara horizontal */
+  justify-content: space-between;
+  /* sejajar secara vertikal */
+  align-items: center;
+  /* relatif sesuai 16px */
+  padding: 1.4rem 7%; /* 1.4 x 16 (atas bawah), 7% untuk kanan kirinya (menyesuaikan device) */
+  background-color: white;
+  border-bottom: 1px solid #d6d6d6;
+  /* 5 komponen supaya navbarnya tetap diatas */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  /* supaya displaynya 1 garis */
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* dihover berubah warna */
+.navbar .navbar-nav a:hover {
+  color: black;
+}
+
+/* supaya ada garisnya */
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5 rem;
+  border-bottom: 0.1rem solid black;
+  /* dibuat supaya tidak kelihatan garisnya */
+  transform: scaleX(0);
+  /* supaya ada transisinya */
+  transition: 0.15s linear;
+}
+
+/* supaya garisnya muncul saat dihover */
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.75);
+}
+
+/*Hero*/
+
+.Hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(./foto/1.jpg);
+}
+
+.Hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  /* supaya warnanya ngeblend dengan gambarnya (hitam) */
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0), #ffffff);
+}
+
+.Hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  text-align: center;
+}
+
+.Hero .content h1 {
+  font-size: 4rem;
+  color: black;
+}
+
+.Hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  color: #503c3c;
+}
+
+/*about*/
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  /* Atur tinggi dan lebar sesuai kebutuhan */
+  width: 50%;
+  margin: 10px auto 50px auto;
+}
+
+.about .about-me {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #b19470;
+}
+
+.about img {
+  width: 15rem;
+  border-radius: 10rem;
+  margin: 0 auto 1rem auto;
+  padding: 1.4rem;
+}
+
+/*Footer*/
+
+footer {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 1rem 0 2rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0rem;
+}
+
+footer .socials a {
+  color: black;
+  margin: 1.5rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: #f8f4ec;
+}
